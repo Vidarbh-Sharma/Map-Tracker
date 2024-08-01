@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+  }
+  
+  svg path {
+    fill: #679692;
+    stroke: rgba(255,255,255,0.5);
+    stroke-width: 0.5;
+    cursor: pointer;
+    transition: fill 0.3s;
+  }
+  
+  svg path:hover { fill: #476966; }
+  
+  .tooltip {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(var(--x),var(--y));
+    font: 0.85rem helvetica,sans-serif;
+    white-space: nowrap;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border-radius: 0.25rem;
+    z-index: 10;
+    display: none;
+  }
+  
+  .active {
+    padding: 0.35rem 0.5rem;
+    display: block;
+  }
